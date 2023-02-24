@@ -1,0 +1,9 @@
+<h2> <%= @list.name %> </h2>
+  <% @list.bookmarks.each do |b| %>
+    <p><%= b.movie.title %></p>
+    <p><%= b.movie.overview %></p>
+    <p><%= b.movie.poster_url %></p>
+    <p><%= b.movie.rating %></p>
+    <p><%= b.comment %></p>
+    <p><%= link_to "Delete", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Sure?"} %></p>
+  <% end %>
