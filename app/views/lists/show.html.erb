@@ -2,6 +2,9 @@
 
 <p><%= render "bookmarks/form", bookmark: @bookmark %></p>
 
+<p><%= cl_image_tag(@list.photo.key,
+      width: 400, height: 300, crop: :fill) %></p>
+
 
   <% @list.bookmarks.each do |b| %>
     <p><%= b.movie.title %></p>
