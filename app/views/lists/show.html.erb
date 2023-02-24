@@ -1,4 +1,8 @@
 <h2> <%= @list.name %> </h2>
+
+<p><%= render "bookmarks/form", bookmark: @bookmark %></p>
+
+
   <% @list.bookmarks.each do |b| %>
     <p><%= b.movie.title %></p>
     <p><%= b.movie.overview %></p>
